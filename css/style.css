@@ -34,20 +34,22 @@ body {
     background: var(--color-body-light);
     font-size: 14px;
     font-weight: 400;
+    height: 100vh;
 }
 /** Header **/
 header {
     background: var(--color-header-light);
     height: 200px;
+    padding: 20px;
 }
 header .head {
     display: flex;
     width: 100%;
-    max-width: 960px;
+    max-width: 1000px;
     margin: 0 auto;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 30px;
+    padding-top: 10px;
 }
 header .head .title {
     padding-bottom: 20px;
@@ -126,7 +128,7 @@ header .head .button input:checked + .slider:before {
 /** Main **/
 main {
     display: flex;
-    max-width: 960px;
+    max-width: 1000px;
     width: 100%;
     margin: 0 auto;
     flex-direction: column;
@@ -230,10 +232,11 @@ main .follows .cards .card .resum.down, main .overview .cards .card .resum.down 
 }
 
 /* Overview */
-main .overview h1 {
+main .overview h2 {
     color: var(--color-card-text);
     font-weight: 700;
-    margin-bottom: 20px;
+    margin: 0 0 20px 0;
+    font-size: 2em;
 }
 main .overview .cards .card .number {
     font-size: 30px;
@@ -263,6 +266,7 @@ main .overview .cards .card .resum .icon {
 /** Atribuiton **/
 .attribution {
     text-align: center;
+    padding: 20px;
 }
 
 /** Dark Mode **/
@@ -309,6 +313,14 @@ body.dark {
         justify-content: space-between;
         width: 100%;
     }
+    main .follows .cards, main .overview .cards {
+        padding: 20px;
+    }
+    main .follows .cards .card, main .overview .cards .card {
+        width: 100%;
+    }
+}
+@media (max-width: 500px) {
     main {
         margin-top: 0;
     }
